@@ -1,0 +1,227 @@
+{
+  "name": "Finn Tidewater",
+  "romanceable": false,
+  "birthday": {
+    "season": "summer",
+    "day": 20
+  },
+  "home": "hearthvale:home",
+  "workplace": "example_addon:fishing_hut",
+  "requires": [
+    "example_addon:fishing_hut"
+  ],
+  "schedule": [
+    {
+      "from": "6:00",
+      "to": "7:00",
+      "at": "home"
+    },
+    {
+      "weather": "rain",
+      "from": "7:00",
+      "to": "18:00",
+      "at": "work"
+    },
+    {
+      "from": "7:00",
+      "to": "16:00",
+      "at": "wander"
+    },
+    {
+      "from": "16:00",
+      "to": "19:00",
+      "at": "work"
+    },
+    {
+      "from": "19:00",
+      "to": "6:00",
+      "at": "home"
+    }
+  ],
+  "gifts": {
+    "loved": [
+      "minecraft:cooked_salmon",
+      "minecraft:fishing_rod"
+    ],
+    "liked": [
+      "minecraft:cod",
+      "minecraft:salmon",
+      "minecraft:string"
+    ],
+    "disliked": [
+      "minecraft:rotten_flesh"
+    ],
+    "hated": [
+      "minecraft:pufferfish"
+    ]
+  },
+  "arrival": [
+    "Ahoy! Finn Tidewater. Fisherman. The river up north dried out, so I followed the sound of water here.",
+    {
+      "say": "Got room for one more rod and a very smelly bucket?",
+      "choices": [
+        {
+          "text": "Welcome aboard!",
+          "reply": "Ha! Best news all week.",
+          "points": 30
+        },
+        {
+          "text": "Just keep the smell outside.",
+          "reply": "No promises!",
+          "points": 10
+        }
+      ]
+    }
+  ],
+  "greetings": [
+    {
+      "say": "Fish are biting. Mostly my fingers, but still."
+    },
+    {
+      "say": "Rain's perfect for fishing.",
+      "weather": "rain"
+    },
+    {
+      "say": "You and me, {player}. Best fishing buddies in the village.",
+      "min_hearts": 6
+    }
+  ],
+  "events": [
+    {
+      "id": "first_catch",
+      "name": "First Catch",
+      "min_hearts": 2,
+      "script": [
+        "Look, {player}! My first catch in this river!",
+        {
+          "say": "What should I do with it?",
+          "choices": [
+            {
+              "text": "Cook it right now.",
+              "reply": "Fresh and hot? You have good instincts.",
+              "points": 40
+            },
+            {
+              "text": "Throw it back.",
+              "reply": "Respectful. The river will remember.",
+              "points": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tangled_line",
+      "name": "Tangled Line",
+      "min_hearts": 4,
+      "requires_event": [
+        "first_catch"
+      ],
+      "script": [
+        "*Finn is tangled up in his own line, hopping on one foot.*",
+        {
+          "say": "Help?!",
+          "choices": [
+            {
+              "text": "Cut the line.",
+              "reply": "My favourite line! ...But thanks.",
+              "points": 10
+            },
+            {
+              "text": "Untangle it patiently.",
+              "reply": "You're a saint.",
+              "points": 50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "night_fishing",
+      "name": "Night Fishing",
+      "min_hearts": 6,
+      "time": "evening",
+      "requires_event": [
+        "tangled_line"
+      ],
+      "cutscene": {
+        "steps": [
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                3,
+                2,
+                3
+              ]
+            },
+            "look": "npc",
+            "ticks": 40
+          },
+          {
+            "do": "hold",
+            "actor": "npc",
+            "item": "minecraft:fishing_rod"
+          },
+          {
+            "do": "animate",
+            "actor": "npc",
+            "anim": "swing"
+          },
+          {
+            "do": "sound",
+            "sound": "minecraft:entity.fishing_bobber.splash",
+            "at": "npc"
+          },
+          "Shh. The big one only bites at dusk.",
+          {
+            "say": "Sit with me?",
+            "choices": [
+              {
+                "text": "Sit quietly.",
+                "reply": "*You watch the water together until the stars come out.*",
+                "points": 70
+              },
+              {
+                "text": "Splash around.",
+                "reply": "You'll scare the fish!",
+                "points": -10
+              }
+            ]
+          },
+          {
+            "do": "hold",
+            "actor": "npc",
+            "item": "none"
+          },
+          {
+            "do": "camera",
+            "reset": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "the_big_one",
+      "name": "The Big One",
+      "min_hearts": 10,
+      "requires_event": [
+        "night_fishing"
+      ],
+      "script": [
+        "*Finn holds up an enormous silver fish, soaking wet and grinning.*",
+        "Can you believe it?! The big one! I couldn't have done it without you, {player}.",
+        {
+          "say": "This one's yours.",
+          "give": "minecraft:cooked_salmon",
+          "points": 100
+        }
+      ]
+    }
+  ],
+  "profile": {
+    "summary": "A good-natured fisherman who talks to his bait and swears the fish talk back.",
+    "backstory": "When the river up north dried out, Finn followed the sound of running water south. He is hoping to find a quiet bank, a sturdy hut and a village that doesn't mind the smell."
+  }
+}

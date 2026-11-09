@@ -1,0 +1,11 @@
+{
+  "display_name": "Fishing Hut",
+  "priority": 40,
+  "min_volume": 8,
+  "requires": [
+    { "any": ["minecraft:barrel"], "count": 1 },
+    { "any": ["minecraft:cauldron"], "count": 1 },
+    { "any": ["minecraft:lantern", "minecraft:soul_lantern"], "count": 1 },
+    { "any": ["#minecraft:doors"], "count": 1 }
+  ]
+}
