@@ -1,0 +1,694 @@
+{
+  "name": "Elara Voss",
+  "slim": true,
+  "romanceable": true,
+  "birthday": {
+    "season": "spring",
+    "day": 14
+  },
+  "home": "home",
+  "workplace": "library",
+  "requires": [
+    "library"
+  ],
+  "schedule": [
+    {
+      "from": "6:00",
+      "to": "8:00",
+      "at": "home"
+    },
+    {
+      "weather": "rain",
+      "from": "8:00",
+      "to": "20:00",
+      "at": "work"
+    },
+    {
+      "days": [
+        "sun"
+      ],
+      "from": "8:00",
+      "to": "20:00",
+      "at": "home"
+    },
+    {
+      "days": [
+        "sat"
+      ],
+      "from": "12:00",
+      "to": "17:00",
+      "at": "wander"
+    },
+    {
+      "from": "8:00",
+      "to": "18:00",
+      "at": "work"
+    },
+    {
+      "from": "18:00",
+      "to": "20:00",
+      "at": "building:tavern"
+    },
+    {
+      "from": "20:00",
+      "to": "6:00",
+      "at": "home"
+    }
+  ],
+  "spouse_schedule": [
+    {
+      "from": "6:00",
+      "to": "9:00",
+      "at": "home"
+    },
+    {
+      "from": "9:00",
+      "to": "14:00",
+      "at": "work"
+    },
+    {
+      "from": "14:00",
+      "to": "17:00",
+      "at": "hearth"
+    },
+    {
+      "from": "17:00",
+      "to": "6:00",
+      "at": "home"
+    }
+  ],
+  "gifts": {
+    "loved": [
+      "minecraft:enchanted_book",
+      "minecraft:writable_book",
+      "minecraft:amethyst_shard",
+      "minecraft:spyglass"
+    ],
+    "liked": [
+      "minecraft:book",
+      "minecraft:paper",
+      "minecraft:lantern",
+      "minecraft:honey_bottle",
+      "#minecraft:small_flowers"
+    ],
+    "disliked": [
+      "minecraft:rotten_flesh",
+      "minecraft:spider_eye",
+      "minecraft:bone"
+    ],
+    "hated": [
+      "minecraft:tnt",
+      "minecraft:gunpowder",
+      "minecraft:lava_bucket"
+    ]
+  },
+  "gift_reactions": {
+    "loved": [
+      "{item}?! You remembered what I like. This is perfect.",
+      "Oh, {item}... I'm going to cry on the first page."
+    ],
+    "liked": [
+      "{item}! How thoughtful.",
+      "Thank you. I'll keep it where I can see it while I work."
+    ],
+    "neutral": [
+      "Oh. Thank you, {player}.",
+      "That's... kind of you."
+    ],
+    "disliked": [
+      "{item}? In a library?",
+      "Ah. Thank you. I think."
+    ],
+    "hated": [
+      "Please keep that far away from the books.",
+      "Do you want the whole library to burn down?!"
+    ]
+  },
+  "arrival": [
+    "Oh! Hello. Sorry, I didn't expect anyone out here. I'm Elara. I've carried these books across half the country, and my arms may never forgive me.",
+    {
+      "say": "I saw the smoke from your hearth and... well. A village with shelves enough for a library? May I settle here?",
+      "choices": [
+        {
+          "text": "Of course. You're welcome here.",
+          "reply": [
+            "Truly? Thank you, {player}. I promise to be a good neighbour. And a quiet one. Mostly."
+          ],
+          "points": 40
+        },
+        {
+          "text": "You can have the best shelf.",
+          "reply": [
+            "The best shelf! I'm going to remember you said that."
+          ],
+          "points": 20
+        }
+      ]
+    },
+    "I'll go and find my new front door. Thank you, {player}."
+  ],
+  "bouquet_accept": [
+    "Is this... for me? Flowers? In a library?",
+    "*She hides her smile behind the bouquet.*",
+    "Yes, {player}. I would like that. Very much."
+  ],
+  "bouquet_reject": [
+    "That's very sweet. But I think we should know each other a little better first."
+  ],
+  "pendant_accept": [
+    "Is that a pendant? {player}... are you...",
+    "Yes. A thousand times yes. Give me three days to finish my speech, and a quiet dress."
+  ],
+  "pendant_reject": [
+    "Oh! I'm not ready for that. Please, give me time."
+  ],
+  "wedding": [
+    "*The whole village gathers at the hearth. Elara walks toward you with ink-stained fingers and a crown of wildflowers.*",
+    "I'm nervous. I've written this speech eleven times and thrown ten of them away.",
+    {
+      "say": "I, Elara Voss, promise to keep your name on every title page of my life. Will you have me, {player}?",
+      "choices": [
+        {
+          "text": "I will.",
+          "reply": [
+            "Then it's settled. Partner. My favourite word."
+          ]
+        },
+        {
+          "text": "Always.",
+          "reply": [
+            "Then it's settled. Partner. My favourite word."
+          ]
+        }
+      ]
+    },
+    "*Cheers ring out across the village.*"
+  ],
+  "greetings": [
+    {
+      "say": "It's my birthday and you're here. Maybe this will be a good year after all.",
+      "birthday": true
+    },
+    {
+      "say": "Rain on the roof is the best soundtrack for a library, don't you think?",
+      "weather": "rain",
+      "max_hearts": 9,
+      "status": [
+        "friend"
+      ]
+    },
+    {
+      "say": "Rain, a lantern, a book, and you. I couldn't have designed it better.",
+      "weather": "rain",
+      "min_hearts": 6
+    },
+    {
+      "say": "Oh, hello. Do you need help finding something?",
+      "max_hearts": 2
+    },
+    {
+      "say": "Shh... well, you're allowed to talk. A little.",
+      "max_hearts": 2,
+      "location": "library"
+    },
+    {
+      "say": "{player}! I saved you the seat by the window.",
+      "min_hearts": 3,
+      "max_hearts": 5
+    },
+    {
+      "say": "Looking for a book, or just good company?",
+      "min_hearts": 3,
+      "max_hearts": 5
+    },
+    {
+      "say": "You're becoming a regular, {player}. I rather like it.",
+      "min_hearts": 6,
+      "max_hearts": 9
+    },
+    {
+      "say": "Sundays are for rereading old favourites.",
+      "weekday": [
+        "sun"
+      ]
+    },
+    {
+      "say": "Good morning. I've already catalogued six shelves and I'm very pleased with myself.",
+      "time": "morning",
+      "min_hearts": 2
+    },
+    {
+      "say": "The lantern hours are my favourite. Everything feels like the start of a story.",
+      "time": "evening",
+      "min_hearts": 4
+    },
+    {
+      "say": "My favourite reader. Hello.",
+      "status": [
+        "dating"
+      ]
+    },
+    {
+      "say": "I catch myself listening for your footsteps. Is that strange?",
+      "status": [
+        "dating",
+        "engaged"
+      ],
+      "min_hearts": 10
+    },
+    {
+      "say": "Welcome home, {player}. I kept your tea warm.",
+      "status": [
+        "married"
+      ]
+    },
+    {
+      "say": "I found a page of my novel in your coat pocket. You've been rereading it, haven't you?",
+      "status": [
+        "married"
+      ],
+      "min_hearts": 12
+    }
+  ],
+  "profile": {
+    "summary": "A soft-spoken librarian who would rather be reading than talking. She keeps the village's books in order and notices far more than she lets on.",
+    "backstory": "Elara grew up in a quiet lakeside town where the library was her whole world. When its funding dried up, she packed as many books as she could carry and set off to find a place that still needed a librarian. She arrives with a heavy pack, ink-stained fingers and a standing preference for rainy days."
+  },
+  "events": [
+    {
+      "id": "quiet_corner",
+      "name": "A Quiet Corner",
+      "min_hearts": 2,
+      "location": "library",
+      "cutscene": {
+        "steps": [
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                2.6,
+                1.9,
+                2.6
+              ]
+            },
+            "look": "npc",
+            "ticks": 35
+          },
+          {
+            "do": "emote",
+            "actor": "npc",
+            "emote": "exclaim"
+          },
+          {
+            "do": "sound",
+            "sound": "minecraft:entity.villager.ambient",
+            "at": "npc"
+          },
+          "{player}? Oh, you startled me. I was counting spines. It's a thing I do.",
+          {
+            "say": "Tell me, since you're here: what do you reach for when you want to lose an afternoon?",
+            "choices": [
+              {
+                "text": "Adventure stories.",
+                "reply": [
+                  "Dragons and ruined castles? Yes! I have a whole shelf. Don't tell anyone I read them twice."
+                ],
+                "points": 30
+              },
+              {
+                "text": "Histories and maps.",
+                "reply": [
+                  "A fellow cartographer of the mind. I'll set the good atlases aside for you."
+                ],
+                "points": 40
+              },
+              {
+                "text": "Honestly, I just like the quiet.",
+                "reply": [
+                  "...That might be the nicest thing anyone has said about this room."
+                ],
+                "points": 50
+              }
+            ]
+          },
+          "Come back any time. The quiet is free.",
+          {
+            "do": "camera",
+            "reset": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "missing_volume",
+      "name": "The Missing Volume",
+      "min_hearts": 4,
+      "requires_event": [
+        "quiet_corner"
+      ],
+      "script": [
+        "Have you seen a green book with a cracked spine? 'Tides of Ember'? I'd swear I shelved it, but it has simply... gone.",
+        {
+          "say": "It isn't even valuable. It's the first book I ever borrowed, when I was small.",
+          "choices": [
+            {
+              "text": "Check under the window cushion.",
+              "reply": [
+                "*She lifts the cushion. The green book is right there.*",
+                "You found it! How did you know?",
+                "I'll never lose it again. Thank you, {player}."
+              ],
+              "points": 60
+            },
+            {
+              "text": "Maybe someone borrowed it.",
+              "reply": [
+                "Maybe. I'll ask around. Thank you for not laughing."
+              ],
+              "points": 20
+            },
+            {
+              "text": "It's just a book.",
+              "reply": [
+                "Just a book. Of course."
+              ],
+              "points": -20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "storm_reading",
+      "name": "Storm Reading",
+      "min_hearts": 6,
+      "weather": "rain",
+      "requires_event": [
+        "missing_volume"
+      ],
+      "script": [
+        "Rain this loud makes the shelves hum. Do you hear it?",
+        {
+          "say": "I read aloud during storms. Would you mind sitting a while?",
+          "choices": [
+            {
+              "text": "Read to me.",
+              "reply": [
+                "*She reads by lantern light, and the rain forgets to be loud.*",
+                "Thank you for staying, {player}."
+              ],
+              "points": 60
+            },
+            {
+              "text": "Only if it's something funny.",
+              "reply": [
+                "Funny! One moment... the dragon who was afraid of fire.",
+                "*You laugh in all the right places. She notices.*"
+              ],
+              "points": 50
+            },
+            {
+              "text": "I should get going.",
+              "reply": [
+                "Of course. Mind the puddles."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "manuscript",
+      "name": "The Manuscript",
+      "min_hearts": 8,
+      "requires_event": [
+        "storm_reading"
+      ],
+      "cutscene": {
+        "steps": [
+          {
+            "do": "hold",
+            "actor": "npc",
+            "item": "minecraft:writable_book"
+          },
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                1.6,
+                1.7,
+                2.0
+              ]
+            },
+            "look": "npc",
+            "ticks": 30
+          },
+          "Before you say anything: nobody has read this. Not one page.",
+          "*She sets a thick stack of pages on the desk, tied with blue thread.*",
+          {
+            "say": "It's a novel. About a lighthouse keeper who writes letters to the sea. Please be honest.",
+            "choices": [
+              {
+                "text": "It's wonderful. I'm already hooked.",
+                "reply": [
+                  "You haven't read a word yet! ...But thank you."
+                ],
+                "points": 30
+              },
+              {
+                "text": "Read me your favourite page first.",
+                "reply": [
+                  "*Her voice shakes on the first line and steadies by the last.*",
+                  "That's the first time I've said it out loud. Thank you."
+                ],
+                "points": 80,
+                "flag": "elara_novel_shared"
+              },
+              {
+                "text": "Who would publish letters to the sea?",
+                "reply": [
+                  "Right. Practical. Of course. Forget I asked."
+                ],
+                "points": -40
+              }
+            ]
+          },
+          {
+            "do": "if",
+            "if": {
+              "requires_flag": [
+                "elara_novel_shared"
+              ]
+            },
+            "then": [
+              {
+                "do": "emote",
+                "actor": "npc",
+                "emote": "heart"
+              },
+              {
+                "do": "sound",
+                "sound": "minecraft:block.amethyst_block.chime",
+                "at": "npc"
+              },
+              {
+                "do": "wait",
+                "ticks": 20
+              }
+            ]
+          },
+          "I'll keep writing. Even if only you read it.",
+          {
+            "do": "hold",
+            "actor": "npc",
+            "item": "none"
+          },
+          {
+            "do": "camera",
+            "reset": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "lantern_night",
+      "name": "Lantern Night",
+      "min_hearts": 10,
+      "status": [
+        "dating",
+        "engaged",
+        "married"
+      ],
+      "time": "evening",
+      "requires_event": [
+        "manuscript"
+      ],
+      "cutscene": {
+        "steps": [
+          {
+            "do": "fade",
+            "to": "black",
+            "ticks": 20
+          },
+          {
+            "do": "title",
+            "text": "That evening...",
+            "ticks": 70
+          },
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                0,
+                4.5,
+                6
+              ]
+            },
+            "look": "npc",
+            "ticks": 0,
+            "snap": true
+          },
+          {
+            "do": "fade",
+            "to": "clear",
+            "ticks": 25
+          },
+          {
+            "do": "effect",
+            "command": "particle minecraft:end_rod ~ ~2.5 ~ 4 2 4 0.02 90"
+          },
+          "*Evening. The library is dark except for one lantern. Elara waits by the door.*",
+          "{player}. I wanted to show you something. Come with me?",
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                1.8,
+                1.8,
+                2.4
+              ]
+            },
+            "look": "npc",
+            "ticks": 50
+          },
+          "*She leads you up a narrow stair to the roof. The sky is thick with stars.*",
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                -1.2,
+                1.9,
+                1.8
+              ]
+            },
+            "look": "npc",
+            "ticks": 40
+          },
+          {
+            "say": "I've spent my whole life inside other people's stories. But you feel like the first chapter that's mine.",
+            "choices": [
+              {
+                "text": "Then let's write it together.",
+                "reply": [
+                  "*She smiles, and for once she doesn't look away.*",
+                  "I'd like that more than anything."
+                ],
+                "points": 100,
+                "flag": "elara_confessed",
+                "steps": [
+                  {
+                    "do": "emote",
+                    "actor": "npc",
+                    "emote": "heart"
+                  },
+                  {
+                    "do": "sound",
+                    "sound": "minecraft:block.amethyst_block.chime",
+                    "at": "npc",
+                    "pitch": 1.2
+                  },
+                  {
+                    "do": "wait",
+                    "ticks": 30
+                  }
+                ]
+              },
+              {
+                "text": "Take your time. I'm not going anywhere.",
+                "reply": [
+                  "That might be the most romantic sentence I've ever heard."
+                ],
+                "points": 80,
+                "steps": [
+                  {
+                    "do": "emote",
+                    "actor": "npc",
+                    "emote": "happy"
+                  },
+                  {
+                    "do": "wait",
+                    "ticks": 20
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "do": "fade",
+            "to": "black",
+            "ticks": 25
+          },
+          {
+            "do": "camera",
+            "reset": true
+          },
+          {
+            "do": "fade",
+            "to": "clear",
+            "ticks": 25
+          }
+        ]
+      }
+    },
+    {
+      "id": "last_chapter",
+      "name": "The Last Chapter",
+      "min_hearts": 12,
+      "status": [
+        "married"
+      ],
+      "requires_event": [
+        "lantern_night"
+      ],
+      "script": [
+        "{player}, come here. I finished it. The book.",
+        "*She opens the cover. The dedication reads: 'For the one who stayed.'*",
+        {
+          "say": "I couldn't have written the ending without you.",
+          "choices": [
+            {
+              "text": "Read it to me. Start to finish.",
+              "reply": [
+                "All night, if you like."
+              ],
+              "points": 100
+            },
+            {
+              "text": "I'm so proud of you.",
+              "reply": [
+                "*She hugs you, and the pages rustle between you like applause.*"
+              ],
+              "points": 100
+            }
+          ]
+        },
+        "Home is wherever you are, {player}. And I'm going to keep it well stocked with books."
+      ]
+    }
+  ]
+}

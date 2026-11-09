@@ -1,0 +1,79 @@
+{
+  "intro": [
+    "Place a Village Hearth to found your village.",
+    "Build closed rooms and furnish them: beds, bookshelves, anvils and more.",
+    "Stand inside each room and use a Surveyor's Deed to register it.",
+    "Welcome the travellers who walk in from the road to your hearth.",
+    "Talk daily, give gifts, and share moments to grow friendships.",
+    "Offer a Bouquet, then a Promise Pendant, to start a life together."
+  ],
+  "items": [
+    {
+      "item": "hearthvale:village_hearth",
+      "kind": "Block",
+      "recipe": "hearthvale:village_hearth",
+      "description": [
+        "The heart of every village. Placing a hearth founds a new village around it, and its warm glow draws wandering travellers in from the road.",
+        "Breaking the hearth dissolves the village, and its villagers pack up and leave."
+      ],
+      "usage": [
+        "Place it somewhere central. Buildings must be within 96 blocks of it.",
+        "Two hearths need at least 64 blocks between them.",
+        "Right-click it to see the village's buildings and residents."
+      ]
+    },
+    {
+      "item": "hearthvale:surveyor_deed",
+      "kind": "Item",
+      "recipe": "hearthvale:surveyor_deed",
+      "description": [
+        "A surveyor's writ that reads a room. Stand inside a finished, sealed room and use the deed: it counts the furniture and registers the room as a Home, Library, Blacksmith or another building type.",
+        "Villagers only move in once a matching building exists."
+      ],
+      "usage": [
+        "The room must be fully enclosed. If there is a gap, the deed tells you where.",
+        "Use it again after rearranging furniture to update the building.",
+        "If nothing matches, it names the closest building and what is missing."
+      ]
+    },
+    {
+      "item": "hearthvale:village_journal",
+      "kind": "Item",
+      "recipe": "hearthvale:village_journal",
+      "description": [
+        "A pocket journal that opens this very book wherever you are: villagers, friendships, homes, events and recipes, all in one place."
+      ],
+      "usage": [
+        "Right-click to open it.",
+        "You can also press the Hearthvale key (J by default) at any time, no item needed."
+      ]
+    },
+    {
+      "item": "hearthvale:bouquet",
+      "kind": "Item",
+      "recipe": "hearthvale:bouquet",
+      "description": [
+        "A hand-tied bunch of small flowers. In Hearthvale, it is how you ask someone if they would like to start courting."
+      ],
+      "usage": [
+        "Right-click a romanceable villager while holding it.",
+        "They need to be at 8 hearts or more. Otherwise they decline, and you keep the bouquet.",
+        "Once accepted, you are dating and friendship can grow up to 10 hearts."
+      ]
+    },
+    {
+      "item": "hearthvale:promise_pendant",
+      "kind": "Item",
+      "recipe": "hearthvale:promise_pendant",
+      "description": [
+        "A golden pendant set with a ruby heart. It is a promise, and an invitation to spend your life with someone.",
+        "Offer it only to someone you are dating at 10 hearts."
+      ],
+      "usage": [
+        "Right-click the villager you are dating while holding it.",
+        "If they say yes, the wedding takes place 3 days later near the hearth.",
+        "After the wedding your spouse moves into the home where your bed is, and friendship can grow up to 14 hearts."
+      ]
+    }
+  ]
+}

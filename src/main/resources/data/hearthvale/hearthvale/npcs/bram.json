@@ -1,0 +1,415 @@
+{
+  "name": "Bram Hollis",
+  "slim": false,
+  "romanceable": false,
+  "birthday": {
+    "season": "fall",
+    "day": 21
+  },
+  "home": "home",
+  "workplace": "tavern",
+  "requires": [
+    "tavern"
+  ],
+  "schedule": [
+    {
+      "from": "6:00",
+      "to": "9:00",
+      "at": "home"
+    },
+    {
+      "from": "9:00",
+      "to": "23:00",
+      "at": "work"
+    },
+    {
+      "from": "23:00",
+      "to": "6:00",
+      "at": "home"
+    }
+  ],
+  "gifts": {
+    "loved": [
+      "minecraft:cooked_porkchop",
+      "minecraft:pumpkin_pie",
+      "minecraft:honey_bottle"
+    ],
+    "liked": [
+      "minecraft:bread",
+      "minecraft:baked_potato",
+      "minecraft:apple",
+      "minecraft:cooked_chicken"
+    ],
+    "disliked": [
+      "minecraft:rotten_flesh",
+      "minecraft:spider_eye"
+    ],
+    "hated": [
+      "minecraft:poisonous_potato",
+      "minecraft:pufferfish"
+    ]
+  },
+  "gift_reactions": {
+    "loved": [
+      "{item}! Friend, you've got taste. First round's on me.",
+      "Ha! {item}! The cellar will smell like heaven tonight."
+    ],
+    "liked": [
+      "{item}, nice. Thank you kindly.",
+      "Well now, that'll do nicely."
+    ],
+    "neutral": [
+      "Thanks, {player}. Appreciate it.",
+      "Kind of you, friend."
+    ],
+    "disliked": [
+      "{item}? Hm. I'll find someone who wants it.",
+      "Er. Thanks. I think."
+    ],
+    "hated": [
+      "I run a clean kitchen! Take it away!",
+      "{item}. Ugh. Out, out."
+    ]
+  },
+  "arrival": [
+    "Well, hello! Bram Hollis, innkeeper. Or I was, before the last town dried up.",
+    {
+      "say": "I see you've got a place with barrels and a fire. Looks like a tavern in the making. Can an old cook stay on?",
+      "choices": [
+        {
+          "text": "Please do. The village needs a heart.",
+          "reply": [
+            "Ha! I'll try to be a warm one."
+          ],
+          "points": 40
+        },
+        {
+          "text": "Only if you cook breakfast.",
+          "reply": [
+            "Deal. Eggs, bacon, and a story with every plate."
+          ],
+          "points": 30
+        }
+      ]
+    },
+    "I'll fetch my pans. Come by later. First pint's free."
+  ],
+  "bouquet_reject": [
+    "Ha! Flattering. But my heart belongs to the kitchen, friend, and to a lady long gone."
+  ],
+  "greetings": [
+    {
+      "say": "It's my birthday? Ha, don't remind an old man. Come, have a drink!",
+      "birthday": true
+    },
+    {
+      "say": "Welcome, welcome! Sit, sit!",
+      "max_hearts": 2,
+      "location": "tavern"
+    },
+    {
+      "say": "What can I get you, {player}?",
+      "max_hearts": 3
+    },
+    {
+      "say": "The usual? I remember the usual.",
+      "min_hearts": 4,
+      "max_hearts": 7
+    },
+    {
+      "say": "Rain's good for business. Folk want soup.",
+      "weather": "rain"
+    },
+    {
+      "say": "Breakfast shift! Eggs are hot, gossip's hotter.",
+      "time": "morning",
+      "min_hearts": 2
+    },
+    {
+      "say": "Evenings are for stories. Got one for you, if you've got time.",
+      "time": "evening",
+      "min_hearts": 4
+    },
+    {
+      "say": "{player}, my friend! You always bring good luck through that door.",
+      "min_hearts": 8
+    },
+    {
+      "say": "Weekend crowd's nasty. Brace yourself.",
+      "weekday": [
+        "sat",
+        "sun"
+      ],
+      "min_hearts": 2
+    }
+  ],
+  "profile": {
+    "summary": "A cheerful innkeeper and cook who believes no problem is too big for a hot meal. Loud laugh, generous pours, endless stories.",
+    "backstory": "Bram has fed travellers on more roads than he can count, and says every tavern he ran taught him something new about people. He is looking for a place with a good hearth and a kitchen that gets used properly."
+  },
+  "events": [
+    {
+      "id": "house_special",
+      "name": "The House Special",
+      "min_hearts": 2,
+      "location": "tavern",
+      "script": [
+        "Ah, {player}! Perfect timing. I've got a new stew and I need an honest mouth.",
+        "*He ladles a bowl and slides it across the bar, steaming.*",
+        {
+          "say": "Well? Be brutal.",
+          "choices": [
+            {
+              "text": "Needs more salt.",
+              "reply": [
+                "HA! Everyone says that! ...Fine, you win. A pinch more."
+              ],
+              "points": 30
+            },
+            {
+              "text": "Perfect. Don't change a thing.",
+              "reply": [
+                "Now you're just buttering me up. ...Keep going."
+              ],
+              "points": 40
+            },
+            {
+              "text": "What exactly is in this?",
+              "reply": [
+                "A chef never reveals the sauce. But... carrots. Mostly carrots."
+              ],
+              "points": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "last_call",
+      "name": "Last Call",
+      "min_hearts": 4,
+      "requires_event": [
+        "house_special"
+      ],
+      "cutscene": {
+        "steps": [
+          {
+            "do": "spawn",
+            "actor": "traveler",
+            "name": "Rowdy Traveler",
+            "skin": "hearthvale:traveler",
+            "at": {
+              "from": "npc",
+              "offset": [
+                1.5,
+                0,
+                1.5
+              ]
+            },
+            "face": "npc"
+          },
+          {
+            "do": "face",
+            "actor": "npc",
+            "toward": "player"
+          },
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                -2.0,
+                1.9,
+                3.2
+              ]
+            },
+            "look": "traveler",
+            "ticks": 35
+          },
+          {
+            "do": "emote",
+            "actor": "traveler",
+            "emote": "angry"
+          },
+          {
+            "do": "sound",
+            "sound": "minecraft:entity.villager.no",
+            "at": "traveler"
+          },
+          "*A broad traveler is slumped on the bar, loud and swaying. Bram catches your eye.*",
+          "Psst. {player}. Could use a hand with this one.",
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                0.5,
+                1.8,
+                2.6
+              ]
+            },
+            "look": "npc",
+            "ticks": 25
+          },
+          {
+            "say": "He's had enough, but he won't hear it from me. Any ideas?",
+            "choices": [
+              {
+                "text": "Step in and escort him out.",
+                "reply": [
+                  "*The traveler grumbles but goes quietly with a clap on his back.*",
+                  "Smooth. Very smooth."
+                ],
+                "points": 60,
+                "steps": [
+                  {
+                    "do": "emote",
+                    "actor": "traveler",
+                    "emote": "sad"
+                  },
+                  {
+                    "do": "fade",
+                    "to": "black",
+                    "ticks": 15
+                  },
+                  {
+                    "do": "despawn",
+                    "actor": "traveler"
+                  },
+                  {
+                    "do": "fade",
+                    "to": "clear",
+                    "ticks": 15
+                  }
+                ]
+              },
+              {
+                "text": "Pour him a big glass of water.",
+                "reply": [
+                  "*He drinks, blinks, and sheepishly apologises.*",
+                  "Water. Brilliant. I should've thought of it."
+                ],
+                "points": 50,
+                "steps": [
+                  {
+                    "do": "emote",
+                    "actor": "traveler",
+                    "emote": "happy"
+                  },
+                  {
+                    "do": "wait",
+                    "ticks": 25
+                  },
+                  {
+                    "do": "despawn",
+                    "actor": "traveler"
+                  }
+                ]
+              },
+              {
+                "text": "Not my problem.",
+                "reply": [
+                  "Ha. Fair enough. Not everyone's cut out for the bar."
+                ],
+                "points": -30,
+                "steps": [
+                  {
+                    "do": "emote",
+                    "actor": "traveler",
+                    "emote": "angry"
+                  },
+                  {
+                    "do": "wait",
+                    "ticks": 25
+                  },
+                  {
+                    "do": "despawn",
+                    "actor": "traveler"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "do": "camera",
+            "reset": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "ghosts_of_the_road",
+      "name": "Ghosts of the Road",
+      "min_hearts": 6,
+      "time": "evening",
+      "requires_event": [
+        "last_call"
+      ],
+      "script": [
+        "*Evening. The room is quiet. Bram wipes the same mug over and over.*",
+        "I wasn't always a cook, {player}. I guarded caravans for twelve years.",
+        "One night we were ambushed on the pass. I lost four friends. I walked away with a limp and a nightmare.",
+        {
+          "say": "That's why I'm here. I wanted to build somewhere nobody has to be afraid on the road.",
+          "choices": [
+            {
+              "text": "You've built exactly that.",
+              "reply": [
+                "*He sets down the mug. His eyes are shiny.* Hm. Maybe I have."
+              ],
+              "points": 70
+            },
+            {
+              "text": "Tell me their names.",
+              "reply": [
+                "*He tells you. All four. Slowly.*",
+                "Nobody's asked in years. Thank you."
+              ],
+              "points": 80
+            },
+            {
+              "text": "That's the past. Move on.",
+              "reply": [
+                "*He goes back to wiping the mug.* Easy to say."
+              ],
+              "points": -30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sign_above_door",
+      "name": "The Sign Above the Door",
+      "min_hearts": 10,
+      "requires_event": [
+        "ghosts_of_the_road"
+      ],
+      "script": [
+        "*The tavern door is closed. A new sign hangs above it, still swinging.*",
+        "I know it's supposed to be a surprise, but I can't wait. Look up.",
+        "*It reads: 'The Hearth & Stranger.' In the lower corner, small, there's one more symbol: your initial.*",
+        {
+          "say": "Every inn needs a stranger who became a friend. I couldn't have put anyone else in that corner.",
+          "choices": [
+            {
+              "text": "I'm honoured, Bram.",
+              "reply": [
+                "*He claps your shoulder.* The honour's mine. Free pints for life."
+              ],
+              "points": 100,
+              "give": "minecraft:golden_apple"
+            },
+            {
+              "text": "This place feels like home.",
+              "reply": [
+                "Then I've done my job."
+              ],
+              "points": 100
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

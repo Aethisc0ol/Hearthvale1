@@ -1,0 +1,10 @@
+{
+  "display_name": "General Store",
+  "priority": 50,
+  "min_volume": 20,
+  "requires": [
+    { "any": ["minecraft:chest"], "count": 3 },
+    { "any": ["#minecraft:signs"], "count": 1 },
+    { "any": ["#minecraft:doors"], "count": 1 }
+  ]
+}

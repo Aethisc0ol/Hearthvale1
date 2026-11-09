@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped", "category": "misc",
+  "pattern": [" G ", "GDG", " G "],
+  "key": { "G": {"item": "minecraft:gold_ingot"}, "D": {"item": "minecraft:diamond"} },
+  "result": { "id": "hearthvale:promise_pendant", "count": 1 }
+}

@@ -1,0 +1,346 @@
+{
+  "name": "Marta Quillfeather",
+  "slim": true,
+  "romanceable": false,
+  "birthday": {
+    "season": "summer",
+    "day": 9
+  },
+  "home": "home",
+  "workplace": "apothecary",
+  "requires": [
+    "apothecary"
+  ],
+  "schedule": [
+    {
+      "from": "6:00",
+      "to": "8:00",
+      "at": "home"
+    },
+    {
+      "weather": "rain",
+      "from": "8:00",
+      "to": "18:00",
+      "at": "work"
+    },
+    {
+      "from": "8:00",
+      "to": "16:00",
+      "at": "work"
+    },
+    {
+      "from": "16:00",
+      "to": "19:00",
+      "at": "wander"
+    },
+    {
+      "from": "19:00",
+      "to": "6:00",
+      "at": "home"
+    }
+  ],
+  "gifts": {
+    "loved": [
+      "minecraft:sweet_berries",
+      "minecraft:honey_bottle",
+      "minecraft:glow_berries",
+      "minecraft:brown_mushroom"
+    ],
+    "liked": [
+      "#minecraft:small_flowers",
+      "minecraft:wheat_seeds",
+      "minecraft:glass_bottle",
+      "minecraft:red_mushroom",
+      "minecraft:bowl"
+    ],
+    "disliked": [
+      "minecraft:gunpowder",
+      "minecraft:blaze_powder"
+    ],
+    "hated": [
+      "minecraft:wither_rose",
+      "minecraft:poisonous_potato"
+    ]
+  },
+  "gift_reactions": {
+    "loved": [
+      "{item}! Oh, you dear thing. This will go in my best tonic.",
+      "Perfect! The garden thanks you, and so do I."
+    ],
+    "liked": [
+      "{item}. Lovely. I know exactly what to do with this.",
+      "How thoughtful, dear."
+    ],
+    "neutral": [
+      "Thank you, dear.",
+      "Ah, a gift! You spoil me."
+    ],
+    "disliked": [
+      "Hm. I'll find a use for it. Eventually.",
+      "Not my favourite, dear, but thanks."
+    ],
+    "hated": [
+      "Not in my shop! Out!",
+      "{item}?! Child, do you want me to faint?"
+    ]
+  },
+  "arrival": [
+    "Oh, my dear. At last, a place with a proper still and a pot garden.",
+    "I'm Marta. Herbalist, healer, grower of very stubborn things. I've been wandering to find a place that would let me plant roots, quite literally.",
+    {
+      "say": "I'm old, but my potions are young. May I settle here?",
+      "choices": [
+        {
+          "text": "Please. We'd be lucky to have you.",
+          "reply": [
+            "Aren't you sweet. I'll bring my seedlings."
+          ],
+          "points": 40
+        },
+        {
+          "text": "Do you make anything for sore feet?",
+          "reply": [
+            "Ha! Sit down, dear. I'll fix that and more."
+          ],
+          "points": 30
+        }
+      ]
+    },
+    "Come by the shop anytime. I'll have the kettle on."
+  ],
+  "bouquet_reject": [
+    "Oh my! Flowers. I'm flattered, but I'm old enough to be your grandmother. Keep them for someone your age, dear."
+  ],
+  "greetings": [
+    {
+      "say": "My birthday! Ha, I've lost count of the candles. Come, have some honey cake.",
+      "birthday": true
+    },
+    {
+      "say": "Mind the jars, dear. Some of them bite.",
+      "max_hearts": 2,
+      "location": "apothecary"
+    },
+    {
+      "say": "Hello, {player}. Need a tonic?",
+      "max_hearts": 3
+    },
+    {
+      "say": "Look at you. Rosy cheeks. Whatever you're doing, keep doing it.",
+      "min_hearts": 4,
+      "max_hearts": 7
+    },
+    {
+      "say": "Rain's wonderful for the garden. Sit, drink some tea.",
+      "weather": "rain"
+    },
+    {
+      "say": "Morning! The dew is perfect for picking. Come help?",
+      "time": "morning",
+      "min_hearts": 2
+    },
+    {
+      "say": "Evenings are for the garden. It sings to those who listen.",
+      "time": "evening",
+      "min_hearts": 3
+    },
+    {
+      "say": "{player}, my dear. You're the grandchild I never had.",
+      "min_hearts": 8
+    }
+  ],
+  "profile": {
+    "summary": "An elderly herbalist and healer with a sharp tongue and a gentle hand. She treats every ailment, and every visitor, like someone she has known for years.",
+    "backstory": "Marta has spent a lifetime on the road collecting seeds, recipes and remedies. Now she is looking for a spot to finally put down roots, quite literally, and a shop with room for a very stubborn garden."
+  },
+  "events": [
+    {
+      "id": "weeds_and_wonders",
+      "name": "Weeds and Wonders",
+      "min_hearts": 2,
+      "location": "apothecary",
+      "script": [
+        "Ah, {player}! Just in time for a pop quiz.",
+        "*She holds up three sprigs: lavender, mint, and something suspiciously fuzzy.*",
+        {
+          "say": "Which of these is good for a sore throat?",
+          "choices": [
+            {
+              "text": "The mint.",
+              "reply": [
+                "Close! Mint cools. But lavender soothes. Remember that for next time."
+              ],
+              "points": 30
+            },
+            {
+              "text": "The lavender.",
+              "reply": [
+                "Brilliant! A natural. You'll be brewing in no time."
+              ],
+              "points": 50
+            },
+            {
+              "text": "The fuzzy one?",
+              "reply": [
+                "NO! That's sneezewort! Don't ever eat the fuzzy one."
+              ],
+              "points": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fever_rain",
+      "name": "Fever Rain",
+      "min_hearts": 4,
+      "weather": "rain",
+      "requires_event": [
+        "weeds_and_wonders"
+      ],
+      "script": [
+        "*Marta stands at the shop door, drenched, holding a satchel.*",
+        "A traveller down the road is burning with fever. I need white clover, ginger root, and a steady hand.",
+        {
+          "say": "My knees won't carry me through the mud tonight. Would you fetch the herbs?",
+          "choices": [
+            {
+              "text": "Of course. Where do I find them?",
+              "reply": [
+                "She tells you: the clover grows by the old well, the ginger by the stream.",
+                "*Later, the fever breaks. Marta presses your hands.*",
+                "You saved a life tonight, {player}."
+              ],
+              "points": 70
+            },
+            {
+              "text": "I'll walk you there instead.",
+              "reply": [
+                "*You hold her arm through the mud. The traveller recovers by morning.*",
+                "Strong arm, kind heart. A rare pair."
+              ],
+              "points": 60
+            },
+            {
+              "text": "Sorry, it's too wet.",
+              "reply": [
+                "Of course, dear. I'll manage."
+              ],
+              "points": -20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "garden_pact",
+      "name": "The Garden Pact",
+      "min_hearts": 6,
+      "requires_event": [
+        "fever_rain"
+      ],
+      "cutscene": {
+        "steps": [
+          {
+            "do": "hold",
+            "actor": "npc",
+            "item": "minecraft:wheat_seeds"
+          },
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                1.4,
+                1.5,
+                2.0
+              ]
+            },
+            "look": "npc",
+            "ticks": 40
+          },
+          {
+            "do": "emote",
+            "actor": "npc",
+            "emote": "happy"
+          },
+          "*Marta kneels in her garden, her fingers black with soil.*",
+          "Come here, {player}. I want to tell you about my garden.",
+          "Every plant here is descended from a seed my own teacher gave me. She carried them across mountains.",
+          {
+            "say": "I'm not getting younger. When I'm gone, someone must keep these seeds alive. Would you promise to?",
+            "choices": [
+              {
+                "text": "I promise.",
+                "reply": [
+                  "*She presses a small pouch into your hand.*",
+                  "Plant them in good soil, dear. And whisper to them."
+                ],
+                "points": 80,
+                "flag": "marta_seed_pact",
+                "give": "minecraft:wheat_seeds"
+              },
+              {
+                "text": "You'll be here for years yet.",
+                "reply": [
+                  "Ha! Flatterer. Yes. Probably. But promise anyway."
+                ],
+                "points": 40
+              },
+              {
+                "text": "I'm not much of a gardener.",
+                "reply": [
+                  "Everyone starts with dirt under their nails. Think about it."
+                ],
+                "points": 10
+              }
+            ]
+          },
+          {
+            "do": "hold",
+            "actor": "npc",
+            "item": "none"
+          },
+          {
+            "do": "camera",
+            "reset": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "long_life_recipe",
+      "name": "Recipe for a Long Life",
+      "min_hearts": 10,
+      "requires_event": [
+        "garden_pact"
+      ],
+      "script": [
+        "{player}, you've been a good friend. Time you learned the secret.",
+        "*She leans in and whispers.*",
+        "The recipe for a long life isn't in the jars. It's laughter, honey, and never letting a good friend eat alone.",
+        {
+          "say": "Eighty-three years, and that's all I've learned. Promise me you'll remember it?",
+          "choices": [
+            {
+              "text": "I'll remember. I promise.",
+              "reply": [
+                "*Marta beams.*",
+                "Take this. A little something for the road ahead."
+              ],
+              "points": 100,
+              "give": "minecraft:golden_apple"
+            },
+            {
+              "text": "I'll make it my own recipe.",
+              "reply": [
+                "That's the spirit. Every recipe's a little different."
+              ],
+              "points": 100
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "display_name": "Blacksmith",
+  "priority": 60,
+  "min_volume": 20,
+  "requires": [
+    { "any": ["#minecraft:anvil"], "count": 1 },
+    { "any": ["minecraft:furnace", "minecraft:blast_furnace"], "count": 1 },
+    { "any": ["minecraft:smithing_table", "minecraft:grindstone"], "count": 1 },
+    { "any": ["#minecraft:doors"], "count": 1 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "display_name": "Home",
+  "priority": 10,
+  "min_volume": 12,
+  "housing": true,
+  "requires": [
+    { "any": ["#minecraft:beds"], "count": 1 },
+    { "any": ["#minecraft:doors"], "count": 1 }
+  ]
+}

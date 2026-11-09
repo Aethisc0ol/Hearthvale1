@@ -1,0 +1,11 @@
+{
+  "display_name": "Apothecary",
+  "priority": 60,
+  "min_volume": 16,
+  "requires": [
+    { "any": ["minecraft:brewing_stand"], "count": 1 },
+    { "any": ["minecraft:cauldron"], "count": 1 },
+    { "any": ["#minecraft:flower_pots"], "count": 2 },
+    { "any": ["#minecraft:doors"], "count": 1 }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "display_name": "Tavern",
+  "priority": 55,
+  "min_volume": 30,
+  "requires": [
+    { "any": ["minecraft:barrel"], "count": 2 },
+    { "any": ["minecraft:campfire", "minecraft:smoker", "minecraft:cauldron"], "count": 1 },
+    { "any": ["#minecraft:doors"], "count": 1 }
+  ]
+}

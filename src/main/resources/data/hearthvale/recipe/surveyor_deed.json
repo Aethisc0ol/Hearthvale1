@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:crafting_shapeless", "category": "misc",
+  "ingredients": [ {"item": "minecraft:paper"}, {"item": "minecraft:ink_sac"} ],
+  "result": { "id": "hearthvale:surveyor_deed", "count": 1 }
+}

@@ -1,0 +1,555 @@
+{
+  "name": "Garrick Ironhand",
+  "slim": false,
+  "romanceable": true,
+  "birthday": {
+    "season": "winter",
+    "day": 3
+  },
+  "home": "home",
+  "workplace": "blacksmith",
+  "requires": [
+    "blacksmith"
+  ],
+  "schedule": [
+    {
+      "from": "6:00",
+      "to": "7:00",
+      "at": "home"
+    },
+    {
+      "days": [
+        "sat"
+      ],
+      "from": "12:00",
+      "to": "18:00",
+      "at": "building:tavern"
+    },
+    {
+      "from": "7:00",
+      "to": "17:00",
+      "at": "work"
+    },
+    {
+      "from": "17:00",
+      "to": "21:00",
+      "at": "building:tavern"
+    },
+    {
+      "from": "21:00",
+      "to": "6:00",
+      "at": "home"
+    }
+  ],
+  "spouse_schedule": [
+    {
+      "from": "6:00",
+      "to": "8:00",
+      "at": "home"
+    },
+    {
+      "from": "8:00",
+      "to": "16:00",
+      "at": "work"
+    },
+    {
+      "from": "16:00",
+      "to": "19:00",
+      "at": "hearth"
+    },
+    {
+      "from": "19:00",
+      "to": "6:00",
+      "at": "home"
+    }
+  ],
+  "gifts": {
+    "loved": [
+      "minecraft:diamond",
+      "minecraft:netherite_scrap",
+      "minecraft:cooked_beef",
+      "minecraft:blast_furnace"
+    ],
+    "liked": [
+      "minecraft:iron_ingot",
+      "minecraft:coal",
+      "minecraft:charcoal",
+      "minecraft:bread",
+      "minecraft:golden_apple"
+    ],
+    "disliked": [
+      "minecraft:poppy",
+      "minecraft:dandelion",
+      "minecraft:cake"
+    ],
+    "hated": [
+      "minecraft:water_bucket",
+      "minecraft:ice",
+      "minecraft:wet_sponge"
+    ]
+  },
+  "gift_reactions": {
+    "loved": [
+      "{item}. Hah! Now that's a gift worth the fire.",
+      "...{item}. You do know how to leave a man speechless."
+    ],
+    "liked": [
+      "{item}, eh? Useful. Thanks.",
+      "Good stuff. I'll put it to work."
+    ],
+    "neutral": [
+      "Hm. Thanks.",
+      "Appreciate it, {player}."
+    ],
+    "disliked": [
+      "{item}? What am I supposed to do with that?",
+      "Hmph. Not my thing."
+    ],
+    "hated": [
+      "Get that away from my forge!",
+      "{item}. You're joking. Tell me you're joking."
+    ]
+  },
+  "arrival": [
+    "Hrm. Smoke from a hearth, a village with a proper forge going up. Finally.",
+    "Name's Garrick. Smith, thirty years. My last town burned its own bridge, and I'm tired of walking.",
+    {
+      "say": "I'll earn my keep. Hammer doesn't care where it falls. Room for one more?",
+      "choices": [
+        {
+          "text": "Stay. We need a smith.",
+          "reply": [
+            "Good. Then you'll have the finest nails in the country."
+          ],
+          "points": 40
+        },
+        {
+          "text": "As long as you share your stories.",
+          "reply": [
+            "Hah. Maybe after the second pint."
+          ],
+          "points": 30
+        }
+      ]
+    },
+    "I'll find the anvil. Don't touch anything hot."
+  ],
+  "bouquet_accept": [
+    "...Flowers. Nobody's ever given me flowers.",
+    "*He turns them over in thick, scarred hands, as if they might break.*",
+    "I'd like to see where this goes, {player}."
+  ],
+  "bouquet_reject": [
+    "Flowers? Hah. That's... kind. But I don't know you well enough for that."
+  ],
+  "pendant_accept": [
+    "That's... {player}, are you proposing to a blacksmith?",
+    "*He clears his throat twice.*",
+    "Yes. Aye, yes. Three days. I'll find a clean shirt."
+  ],
+  "pendant_reject": [
+    "Whoa. Slow down, friend. Give an old smith more time."
+  ],
+  "wedding": [
+    "*The village gathers by the hearth. Garrick is scrubbed so clean you almost don't recognise him.*",
+    "I don't do speeches. I do iron. So here's what I forged for you: a promise that doesn't bend.",
+    {
+      "say": "Will you take this old smith, {player}?",
+      "choices": [
+        {
+          "text": "I will.",
+          "reply": [
+            "Then that's the best day's work I've ever done."
+          ]
+        },
+        {
+          "text": "Try and stop me.",
+          "reply": [
+            "Hah! Then that's the best day's work I've ever done."
+          ]
+        }
+      ]
+    },
+    "*The village cheers. Somebody bangs a pot on an anvil.*"
+  ],
+  "greetings": [
+    {
+      "say": "Birthday, hm? Don't make a fuss. ...But thanks for coming by.",
+      "birthday": true
+    },
+    {
+      "say": "Mind the sparks.",
+      "max_hearts": 2,
+      "location": "blacksmith"
+    },
+    {
+      "say": "Need something mended, or just looking?",
+      "max_hearts": 2
+    },
+    {
+      "say": "Ah, {player}. Pull up a stool.",
+      "min_hearts": 3,
+      "max_hearts": 5
+    },
+    {
+      "say": "Good iron, good ale, good company. Rare combination.",
+      "min_hearts": 3,
+      "max_hearts": 6,
+      "location": "tavern"
+    },
+    {
+      "say": "You've got a good eye for quality, {player}. I notice these things.",
+      "min_hearts": 6,
+      "max_hearts": 9
+    },
+    {
+      "say": "Cold out. Perfect weather for working metal.",
+      "weather": "rain"
+    },
+    {
+      "say": "Early start. I like that.",
+      "time": "morning",
+      "min_hearts": 2
+    },
+    {
+      "say": "Saturdays, I drink. Don't tell the anvil.",
+      "weekday": [
+        "sat"
+      ],
+      "min_hearts": 2
+    },
+    {
+      "say": "Hey, you. Good to see you.",
+      "status": [
+        "dating"
+      ]
+    },
+    {
+      "say": "I made something for you, but it isn't done yet. Don't ask.",
+      "status": [
+        "dating",
+        "engaged"
+      ],
+      "min_hearts": 9
+    },
+    {
+      "say": "Home. Finally. Come here.",
+      "status": [
+        "married"
+      ]
+    },
+    {
+      "say": "Still can't believe my luck. Don't tell the anvil that either.",
+      "status": [
+        "married"
+      ],
+      "min_hearts": 12
+    }
+  ],
+  "profile": {
+    "summary": "A gruff smith who speaks in short sentences and lets his work do the talking. Dependable, proud, and warmer than he looks.",
+    "backstory": "Garrick has spent thirty years at the forge, drifting from town to town wherever honest metalwork was needed. He walks into your village with a battered toolkit and no intention of leaving a job half done."
+  },
+  "events": [
+    {
+      "id": "cold_iron",
+      "name": "Cold Iron",
+      "min_hearts": 2,
+      "location": "blacksmith",
+      "script": [
+        "Don't stand so close to the quench barrel. ...Hmph. You've got steady feet. Most don't.",
+        {
+          "say": "Tell me, can you swing a hammer?",
+          "choices": [
+            {
+              "text": "Show me how.",
+              "reply": [
+                "*He guides your hands onto the hammer and shows you the rhythm: tap, tap, strike.*",
+                "There. You've got it."
+              ],
+              "points": 40
+            },
+            {
+              "text": "I'd rather watch.",
+              "reply": [
+                "Fair. Watching's half of learning."
+              ],
+              "points": 20
+            },
+            {
+              "text": "Looks like loud, dirty work.",
+              "reply": [
+                "It is. It's also the only honest kind."
+              ],
+              "points": -10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "broken_blade",
+      "name": "The Broken Blade",
+      "min_hearts": 4,
+      "requires_event": [
+        "cold_iron"
+      ],
+      "script": [
+        "*He holds a sword snapped clean in two.* Forty years, my father's blade never failed. Cracked on the first day I wore it.",
+        {
+          "say": "I've been trying to mend it for a week. The metal won't take the weld.",
+          "choices": [
+            {
+              "text": "Metal remembers. It can be mended.",
+              "reply": [
+                "...Maybe it can. Maybe I just needed someone to say it."
+              ],
+              "points": 60
+            },
+            {
+              "text": "Maybe it's time to retire it.",
+              "reply": [
+                "Retire it. Hrm. Maybe you're right. Doesn't feel right, though."
+              ],
+              "points": -20
+            },
+            {
+              "text": "Tell me about your father.",
+              "reply": [
+                "Stubborn. Quiet. Taught me everything but how to say what I feel. Maybe I'll tell you more some day."
+              ],
+              "points": 50,
+              "flag": "garrick_father_mentioned"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ember_night",
+      "name": "Ember Night",
+      "min_hearts": 6,
+      "time": "evening",
+      "requires_event": [
+        "broken_blade"
+      ],
+      "script": [
+        "*Evening. Garrick nurses a mug alone in the corner of the tavern.*",
+        "Sit, {player}. I don't usually talk about this.",
+        "I left the capital because I got too good. They wanted me to forge weapons for a war I didn't believe in.",
+        {
+          "say": "So I walked away. Left my forge, my name, everything. Do you think that makes me a coward?",
+          "choices": [
+            {
+              "text": "No. It made you honest.",
+              "reply": [
+                "*He stares into his mug for a long moment.* ...Thanks, {player}. I needed to hear that."
+              ],
+              "points": 70
+            },
+            {
+              "text": "Maybe. But you're here now.",
+              "reply": [
+                "Aye. I'm here now. That's something."
+              ],
+              "points": 30
+            },
+            {
+              "text": "Yes.",
+              "reply": [
+                "*His jaw tightens.* Hrm. Fair. Not what I wanted to hear."
+              ],
+              "points": -50
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anvil_song",
+      "name": "Anvil Song",
+      "min_hearts": 8,
+      "requires_event": [
+        "ember_night"
+      ],
+      "cutscene": {
+        "steps": [
+          {
+            "do": "camera",
+            "to": {
+              "from": "npc",
+              "offset": [
+                2.2,
+                1.8,
+                2.6
+              ]
+            },
+            "look": "npc",
+            "ticks": 35
+          },
+          {
+            "do": "hold",
+            "actor": "npc",
+            "item": "minecraft:iron_sword"
+          },
+          {
+            "do": "sound",
+            "sound": "minecraft:block.anvil.use",
+            "at": "npc",
+            "volume": 0.7,
+            "pitch": 1.1
+          },
+          {
+            "do": "animate",
+            "actor": "npc",
+            "anim": "swing"
+          },
+          {
+            "do": "wait",
+            "ticks": 14
+          },
+          {
+            "do": "sound",
+            "sound": "minecraft:block.anvil.use",
+            "at": "npc",
+            "volume": 0.7,
+            "pitch": 1.1
+          },
+          {
+            "do": "animate",
+            "actor": "npc",
+            "anim": "swing"
+          },
+          {
+            "do": "wait",
+            "ticks": 14
+          },
+          {
+            "do": "sound",
+            "sound": "minecraft:block.anvil.use",
+            "at": "npc",
+            "volume": 0.7,
+            "pitch": 1.1
+          },
+          {
+            "do": "animate",
+            "actor": "npc",
+            "anim": "swing"
+          },
+          {
+            "do": "wait",
+            "ticks": 14
+          },
+          "Close the door. I want to show you something.",
+          "*He unwraps a long blade, mirror-bright, with a faint wave in the steel like water.*",
+          "My masterwork. Took me three winters. I never sold it.",
+          {
+            "say": "I want you to have something from this forge. Pick: a tool for working, or a keepsake for remembering.",
+            "choices": [
+              {
+                "text": "A tool.",
+                "reply": [
+                  "*He hands you a freshly forged iron pickaxe.* Use it hard. That's how it says thank you."
+                ],
+                "points": 40,
+                "give": "minecraft:iron_pickaxe"
+              },
+              {
+                "text": "A keepsake.",
+                "reply": [
+                  "*He presses a small iron horseshoe into your palm.* Luck. Keep it close."
+                ],
+                "points": 60,
+                "give": "minecraft:iron_nugget"
+              }
+            ]
+          },
+          {
+            "do": "hold",
+            "actor": "npc",
+            "item": "none"
+          },
+          {
+            "do": "camera",
+            "reset": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "forged_in_fire",
+      "name": "Forged in Fire",
+      "min_hearts": 10,
+      "status": [
+        "dating",
+        "engaged",
+        "married"
+      ],
+      "requires_event": [
+        "anvil_song"
+      ],
+      "script": [
+        "*Garrick is waiting by the forge at dusk, a small bundle in his hands.*",
+        "The broken blade. I finally figured out how to mend it. I didn't weld it back, {player}. I made it into something new.",
+        "*He opens his palm. A plain iron ring, glinting, made from the old sword.*",
+        {
+          "say": "I'm no good with words. But every strike of this hammer thought of you. Is that clumsy?",
+          "choices": [
+            {
+              "text": "It's the best thing anyone's ever said.",
+              "reply": [
+                "*He exhales for the first time in a minute.*",
+                "Then I did right."
+              ],
+              "points": 100,
+              "flag": "garrick_confessed"
+            },
+            {
+              "text": "It's perfect. Like you.",
+              "reply": [
+                "Hmph. Flattery. ...Keep going."
+              ],
+              "points": 80
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "the_heirloom",
+      "name": "The Heirloom",
+      "min_hearts": 12,
+      "status": [
+        "married"
+      ],
+      "requires_event": [
+        "forged_in_fire"
+      ],
+      "script": [
+        "{player}. Morning. Don't say anything yet.",
+        "*He sets his father's mended sword in your hands. It's whole now, the old crack a silver line.*",
+        {
+          "say": "I spent my life afraid of passing down anything. Turns out I just needed someone to pass it to.",
+          "choices": [
+            {
+              "text": "I'll keep it safe.",
+              "reply": [
+                "I know you will."
+              ],
+              "points": 100,
+              "give": "minecraft:diamond_sword"
+            },
+            {
+              "text": "We'll keep it safe, together.",
+              "reply": [
+                "Together. Aye. I like the sound of that."
+              ],
+              "points": 100,
+              "give": "minecraft:diamond_sword"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

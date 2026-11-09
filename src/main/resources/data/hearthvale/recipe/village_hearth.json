@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shaped", "category": "misc",
+  "pattern": ["SSS", "SCS", "BBB"],
+  "key": { "S": {"item": "minecraft:stone_bricks"}, "C": {"item": "minecraft:campfire"}, "B": {"item": "minecraft:bricks"} },
+  "result": { "id": "hearthvale:village_hearth", "count": 1 }
+}

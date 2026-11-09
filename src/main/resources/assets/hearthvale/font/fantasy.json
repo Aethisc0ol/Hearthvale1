@@ -1,0 +1,29 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "hearthvale:font/pixel_extras.png",
+      "ascent": 8,
+      "height": 10,
+      "chars": [
+        "0123456789.,",
+        ":;!?'\"()-+/%",
+        "&*#<>=[]_E\u0000\u0000"
+      ]
+    },
+    {
+      "type": "ttf",
+      "file": "hearthvale:game_paused.otf",
+      "shift": [
+        0.0,
+        0.0
+      ],
+      "size": 11.0,
+      "oversample": 1.0
+    },
+    {
+      "type": "reference",
+      "id": "minecraft:default"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "display_name": "Library",
+  "priority": 60,
+  "min_volume": 24,
+  "requires": [
+    { "any": ["minecraft:bookshelf", "minecraft:chiseled_bookshelf"], "count": 6 },
+    { "any": ["minecraft:lectern"], "count": 1 },
+    { "any": ["#minecraft:doors"], "count": 1 }
+  ]
+}
