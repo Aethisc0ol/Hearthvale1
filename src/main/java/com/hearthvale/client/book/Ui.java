@@ -156,7 +156,7 @@ final class Ui {
         int tw = Math.min(w - 36, textWidth(t));
         Component c = fit(t, w - 36);
         int cx = w / 2;
-        if (cartouche) card(g, cx - tw / 2 - 6, 0, tw + 12, 13, TAN, 0);
+        if (cartouche) Pix.card(g, cx - tw / 2 - 6, 0, tw + 12, 13, TAN, 0);
         g.drawString(font, c, cx - tw / 2, 2, BROWN, false);
         int lineL = 9, lineR = cx - tw / 2 - (cartouche ? 9 : 4);
         if (lineR > lineL) { rect(g, lineL, 6, lineR - lineL, 1, TAN); }
